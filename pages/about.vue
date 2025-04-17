@@ -1,5 +1,13 @@
+<script setup lang="ts">
+const color = ref("red")
+</script>
+
 <template>
-  <section>
-    <p>This page will be displayed at the /about route.</p>
-  </section>
+  <div class="text">hello</div>
 </template>
+
+<style>
+.text {
+  color: v-bind(color);
+}
+</style>

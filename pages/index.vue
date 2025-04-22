@@ -1,10 +1,17 @@
 <script setup lang="ts">
-import About from "~/pages/about.vue";
+async function addTodo() {
+  const todo = await $fetch("/api/todos", {
+    method: "GET",
+  });
+  console.log(todo);
+}
+
+onMounted(async () => {
+  await addTodo();
+});
 </script>
 
 <template>
-  <div>
-    <h1>Welcome to the homepage</h1>
-    <About></About>
-  </div>
+  <NuxtLink to="/about">Go to Blue</NuxtLink>
+  <NuxtLoadingIndicator></NuxtLoadingIndicator>
 </template>

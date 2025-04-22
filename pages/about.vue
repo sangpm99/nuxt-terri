@@ -1,13 +1,3 @@
-<script setup lang="ts">
-const color = ref("red")
-</script>
-
 <template>
-  <div class="text">hello</div>
+  <NuxtLink to="/">Back to Red</NuxtLink>
 </template>
-
-<style>
-.text {
-  color: v-bind(color);
-}
-</style>

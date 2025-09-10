@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const config = useState("config", () => ({ title: "My Site" }));
+</script>
 
 <template>
   <div>
